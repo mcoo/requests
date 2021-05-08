@@ -102,7 +102,7 @@ func (req *Request) Get(origurl string, args ...interface{}) (resp *Response, er
 
 	//reset Cookies,
 	//Client.Do can copy cookie from client.Jar to req.Header
-	delete(req.httpreq.Header, "Cookie")
+	//delete(req.httpreq.Header, "Cookie")
 
 	for _, arg := range args {
 		switch a := arg.(type) {
@@ -365,7 +365,7 @@ func (req *Request) PostJson(origurl string, args ...interface{}) (resp *Respons
 
 	//reset Cookies,
 	//Client.Do can copy cookie from client.Jar to req.Header
-	delete(req.httpreq.Header, "Cookie")
+// 	delete(req.httpreq.Header, "Cookie")
 
 	for _, arg := range args {
 		switch a := arg.(type) {
@@ -439,7 +439,7 @@ func (req *Request) Post(origurl string, args ...interface{}) (resp *Response, e
 
 	//reset Cookies,
 	//Client.Do can copy cookie from client.Jar to req.Header
-	delete(req.httpreq.Header, "Cookie")
+// 	delete(req.httpreq.Header, "Cookie")
 
 	for _, arg := range args {
 		switch a := arg.(type) {
